@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.6rem;
+    background-color: #242333;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.movie-container {
+    margin: 4rem 0;
+}
+
+.movie-container select {
+    display: inline-block;
+    padding: .5rem 1.5rem;
+    font-family: inherit;
+    font-size: 1.4rem;
+    background-color: #fff;
+    color: #303030;
+    margin-left: 1.5rem;
+    border-radius: 5px;
+    border: none;
+}
+
+.legend {
+    background-color: rgba(0,0,0, .1);
+    padding: .5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style: none;
+    color: #777;
+    border-radius: 5px;
+}
+
+.legend li {
+   display: flex;
+   align-items: baseline;
+   justify-content: center;
+   margin-right: 3rem;
+}
+
+.legend li small {
+    margin-left: .3rem;
+}
+
+.seat {
+    margin: .3rem;
+    height: 1.2rem;
+    width: 1.4rem;
+    background-color: rgb(61, 61, 61);
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.seat:not(.occupied):hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.legend .seat:hover {
+    transform: scale(1);
+    cursor: default;
+}
+
+.seat:nth-child(2) {
+    margin-right: 2rem;
+}
+
+.seat:nth-last-child(2) {
+    margin-left: 2rem;
+}
+
+.seat.selected {
+    background-color: #29e6dc;
+}
+
+.seat.occupied {
+    background-color: #fff;
+}
+
+.container {
+    -moz-perspective: 100rem;
+    -ms-perspective: 100rem;
+    -webkit-perspective: 100rem;
+    perspective: 100rem; 
+    margin-bottom: 4rem;  
+}
+
+.screen {
+    height: 6rem;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 .3rem 1rem rgba(255,255,255, .8);
+    margin: 4rem auto;
+    transform: rotateX(-45deg);
+}
+
+.row {
+    display: flex; 
+    justify-content: center;
+}
+
+.text {
+    text-align: center;
+    margin: .5rem auto;
+}
+
+.text span {
+    color: rgb(41, 230, 220);
+}
